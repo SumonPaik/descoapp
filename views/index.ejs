@@ -1,0 +1,34 @@
+<%- include('header') %>
+
+<h3>Enter Information to View Data</h3>
+<p>Data available for Maximum last 30 days!</p>
+<div class="container">
+    <form  action="/desco" method="post">
+    <div class="row">
+        <div class="mb-3 col-3">
+            <label class="form-label" for="meterNo">Meter No. :</label>
+            <input class="form-control" type="text" name="meterNo" placeholder="Enter Meter No.">
+        </div>
+
+        <div class="mb-3 col-3">
+            <label class="form-label" for="accountNo">Account No. :</label>
+            <input class="form-control" type="text" name="accountNo" placeholder="Enter Account No.">
+        </div>
+
+        <div class="mb-3 col-3">
+            <label class="form-label" for="startDate">Date From :</label>
+            <input class="form-control" type="date" name="startDate">
+        </div>
+
+        <div class="mb-3 col-3">
+            <label class="form-label" for="endDate">Date To :</label>
+            <input class="form-control" type="date" name="endDate">
+        </div>
+    </div>
+        <button class="btn btn-primary" type="submit" value="submit">View Data</button>
+    </form>
+</div>
+
+
+
+<%- include('footer') %>

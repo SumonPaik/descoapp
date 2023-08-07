@@ -1,0 +1,35 @@
+<%- include('header') %>
+<div>
+    <h3>
+        DAILY USE
+    </h3>  
+        
+    <table>
+        <thead class="bg-body-tertiary">
+            <th>Date </th>
+            <th>Customer Name</th>
+            <th>Meter No.</th>
+            <th>Account No.</th>
+            <th>Charged Tk.</th>
+            <th>Unit Reading</th>
+            <th>Sanction Load</th>
+            <th>Tariff Solution</th>
+        </thead>
+        <% dailyData.forEach(item => { %>
+            <tbody>
+                <td><%= item.date %></td>
+                <td><%= item.customerName %></td>
+                <td><%= item.meterNo %></td>
+                <td><%= item.accountNo %></td>
+                <td><%= item.consumedTaka %></td>
+                <td><%= item.consumedUnit %></td>
+                <td><%= item.sanctionLoad %></td>
+                <td><%= item.tariffSolution %></td>
+            </tbody>
+        <% }) %>
+        
+    </table>
+</div>
+
+
+<%- include('footer') %>
